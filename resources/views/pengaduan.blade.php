@@ -1,5 +1,5 @@
 @extends('layouts.pages')
 
 @section('isi')
-<h1>Pengaduan</h1>
+ @include('partials.fromPengaduan')
 @endsection

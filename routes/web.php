@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtikelController;
+use App\Models\Catagory;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,12 @@ Route::get('/tentang', function () {
 });
 Route::get('/artikel', [ArtikelController::class, 'index'] );
 Route::get('artikel/{artikel:slug}', [ArtikelController::class, 'show']);
+
+Route::get('/catagories/{catagory:slug}', function(Catagory $catagory){
+    return view('catagory',[
+        'title' => $catagory->name,
+        'artikel' => $catagory->name,
+        'catagory' => $catagory->name
+    ]);
+});
 

@@ -17,8 +17,8 @@
         @yield('isi')
         
         
-        {{-- @include('partials.footer') --}}
     </div>
+    @include('partials.footer')
     
     
     <script src="/path/to/bootstrap.js"></script>
